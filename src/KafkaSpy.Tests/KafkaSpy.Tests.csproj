@@ -16,8 +16,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\KafkaSpy\KafkaSpy.csproj" />
-  </ItemGroup>
-
 </Project>
