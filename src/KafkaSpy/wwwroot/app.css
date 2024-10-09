@@ -1,4 +1,27 @@
-html, body {
+:root {
+  --default-backgroundColor: #FFFFFF;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --default-backgroundColor: #171A1C;
+  }
+}
+
+html {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--default-backgroundColor);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+  min-width: 300px;
+}
+
+body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 

@@ -4,7 +4,7 @@ VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KafkaSpy.Tests", "src\KafkaSpy.Tests\KafkaSpy.Tests.csproj", "{E89DA456-6703-4A7B-82D7-480560E52F52}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KafkaSpy", "src\KafkaSpy\KafkaSpy.csproj", "{23A40FB1-43B3-403B-B4CA-B5B0D89DDE4D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KafkaSpy", "src\KafkaSpy\KafkaSpy.csproj", "{23A40FB1-43B3-403B-B4CA-B5B0D89DDE4D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
