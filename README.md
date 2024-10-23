@@ -11,16 +11,6 @@ Install the package from NuGet with `dotnet add package KafkaSpy`.
 Example code
 ```
 
-## Project Structure
-```
-KafkaSpy
-KafkaSpy.Api
-KafkaSpy.Api.Tests
-KafkaSpy.Tests
-KafkaSpy.Web
-KafkaSpy.Web.Tests
-```
-
 ## Documentation
 See the [wiki](https://github.com/robertcoltheart/kafka-spy/wiki) for examples and help using KafkaSpy.
 

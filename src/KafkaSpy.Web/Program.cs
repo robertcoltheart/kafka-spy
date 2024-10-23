@@ -1,14 +1,20 @@
-using KafkaSpy.Components;
+using KafkaSpy.Api.Controllers;
+using KafkaSpy.Web.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddRazorComponents()
+builder.Services
+    .AddMvc().AddApplicationPart(typeof(ClustersController).Assembly);
+
+builder.Services
+    .AddControllers();
+
+builder.Services
+    .AddRazorComponents()
     .AddInteractiveServerComponents();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error", createScopeForErrors: true);
@@ -17,7 +23,8 @@ if (!app.Environment.IsDevelopment())
 app.UseStaticFiles();
 app.UseAntiforgery();
 
-app.MapRazorComponents<App>()
+app
+    .MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
 
 app.Run();

@@ -8,8 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AWS.MSK.Auth" Version="1.0.1" />
-    <PackageReference Include="Confluent.Kafka" Version="2.6.0" />
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\KafkaSpy\KafkaSpy.csproj" />
   </ItemGroup>
 
 </Project>
