@@ -1,0 +1,9 @@
+﻿<div class="wrapper">
+    <span>
+        @version
+    </span>
+</div>
+
+@code {
+    private readonly string version = $"v{typeof(Version).Assembly.GetName().Version?.ToString(3) ?? "0.0.0"}";
+}

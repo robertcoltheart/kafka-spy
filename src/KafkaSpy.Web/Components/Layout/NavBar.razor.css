@@ -37,7 +37,7 @@ span {
         top: calc(50% + 4px);
     }
 
-a {
+.logoLink {
     position: relative;
     display: flex;
     flex-grow: 0;
@@ -57,7 +57,7 @@ a {
     cursor: pointer;
 }
 
-    a:hover {
+    .logoLink:hover {
         color: var(--default-color-normal);
     }
 
@@ -79,12 +79,40 @@ a {
     padding: 0;
 }
 
-.navbarBurger:hover {
-    background-color: var(--menu-backgroundColor-hover);
-}
+    .navbarBurger:hover {
+        background-color: var(--menu-backgroundColor-hover);
+    }
 
 @media screen and (min-width: 1024px) {
     .navbarBurger {
         display: none;
     }
 }
+
+.narbarItem {
+    display: flex;
+    position: relative;
+    flex-grow: 0;
+    flex-shrink: 0;
+    align-items: center;
+    line-height: 1.5;
+    padding: 0.5rem 0.75rem;
+}
+
+.navbarSocial {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 5px 10px 5px;
+}
+
+.socialLink {
+    display: block;
+    margin-top: 5px;
+    cursor: pointer;
+    fill: var(--icons-discord-normal);
+}
+
+    .socialLink:hover {
+        fill: var(--icons-git-hover);
+    }

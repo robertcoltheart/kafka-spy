@@ -1,0 +1,14 @@
+﻿div {
+    display: flex;
+    align-items: baseline;
+}
+
+span {
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--version-currentVersion-color);
+    margin-left: 0.25rem;
+}

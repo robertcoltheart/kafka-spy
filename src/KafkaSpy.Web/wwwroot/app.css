@@ -123,6 +123,31 @@
     /* Code */
     --code-backgroundColor: var(--colors-neutral-5);
     --code-color: var(--colors-red-55);
+
+    /* Link */
+    --link-color: var(--colors-brand-50);
+    --link-hoverColor: var(--colors-brand-60);
+
+    /* Horizontal rule */
+    --hr-backgroundColor: var(--colors-neutral-5);
+
+    /* Scrollbar */
+    --scrollbar-trackColor-normal: var(--colors-neutral-0);
+    --scrollbar-trackColor-active: var(--colors-neutral-5);
+    --scrollbar-thumbColor-normal: var(--colors-neutral-0);
+    --scrollbar-thumbColor-active: var(--colors-neutral-50);
+
+    /* Version */
+    --version-currentVersion-color: var(--colors-neutral-30);
+    --version-commitLink-color: var(--colors-brand-50);
+
+    /* Icons */
+    --icons-discord-normal: var(--colors-neutral-20);
+    --icons-discord-hover: var(--colors-blue-45);
+    --icons-discord-active: var(--colors-brand-15);
+    --icons-git-hover: var(--colors-neutral-90);
+    --icons-git-active: var(--colors-neutral-70);
+    --icons-dropdownArrowIcon: var(--colors-neutral-50);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -155,6 +180,31 @@
         /* Code */
         --code-backgroundColor: var(--colors-neutral-95);
         --code-color: var(--colors-red-55);
+
+        /* Link */
+        --link-color: var(--colors-brand-50);
+        --link-hoverColor: var(--colors-brand-30);
+
+        /* Horizontal rule */
+        --hr-backgroundColor: var(--colors-neutral-80);
+
+        /* Scrollbar */
+        --scrollbar-trackColor-normal: var(--colors-neutral-90);
+        --scrollbar-trackColor-active: var(--colors-neutral-85);
+        --scrollbar-thumbColor-normal: var(--colors-neutral-75);
+        --scrollbar-thumbColor-active: var(--colors-neutral-50);
+
+        /* Version */
+        --version-currentVersion-color: var(--colors-neutral-50);
+        --version-commitLink-color: var(--colors-brand-30);
+
+        /* Icons */
+        --icons-discord-normal: var(--colors-neutral-30);
+        --icons-discord-hover: var(--colors-blue-45);
+        --icons-discord-active: var(--colors-brand-15);
+        --icons-git-hover: var(--colors-neutral-70);
+        --icons-git-active: var(--colors-neutral-90);
+        --icons-dropdownArrowIcon: var(--colors-neutral-50);
     }
 }
 
@@ -171,8 +221,7 @@ html {
     min-width: 300px;
 }
 
-#root,
-body {
+#root, body {
     width: 100%;
     position: relative;
     margin: 0;
@@ -182,27 +231,15 @@ body {
     line-height: 20px;
 }
 
-article,
-aside,
-figure,
-footer,
-header,
-hgroup,
-section {
+article, aside, figure, footer, header, hgroup, section {
     display: block;
 }
 
-body,
-button,
-input,
-optgroup,
-select,
-textarea {
+body, button, input, optgroup, select, textarea {
     font-family: inherit;
 }
 
-code,
-pre {
+code, pre {
     font-family: 'Roboto Mono', sans-serif;
     -moz-osx-font-smoothing: auto;
     -webkit-font-smoothing: auto;
@@ -219,10 +256,50 @@ pre {
     overflow-x: auto;
     white-space: pre;
     word-wrap: normal;
+}
 
-    & code {
-        background-color: transparent;
-        color: currentColor;
-        padding: 0;
+pre code {
+    background-color: transparent;
+    color: currentColor;
+    padding: 0;
+}
+
+a {
+    color: var(--link-color);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+    a:hover {
+        color: var(--link-hoverColor);
+    }
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+input[type='checkbox'], input[type='radio'] {
+    vertical-align: baseline;
+}
+
+hr {
+    background-color: var(--hr-backgroundColor);
+    border: none;
+    display: block;
+    height: 1px;
+    margin: 0;
+}
+
+fieldset {
+    border: none;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }

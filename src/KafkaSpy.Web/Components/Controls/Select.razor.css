@@ -1,0 +1,34 @@
+﻿ul {
+    position: relative;
+    list-style: none;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    justify-content: space-between;
+    height: 32px;
+    border: 1px none solid; /* TODO */
+    border-radius: 4px;
+    font-size: 14px;
+    width: fit-content;
+    padding-left: 16px;
+    padding-right: 12px;
+    color: red; /* TODO */
+    min-width: auto; /* TODO */
+    cursor: pointer; /* TODO */
+}
+
+    ul:hover {
+        color: brown;
+        border-color: black;
+    }
+
+    ul:focus {
+        outline: none;
+        color: green;
+        border-color: blue;
+    }
+
+    ul:disabled {
+        color: yellow;
+        border-color: aqua;
+    }

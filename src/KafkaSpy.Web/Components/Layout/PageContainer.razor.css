@@ -1,29 +1,23 @@
-﻿.page {
+﻿.layout {
     min-width: 1200px;
 }
 
 @media screen and (max-width: 1023px) {
-    .page {
+    .layout {
         min-width: initial;
     }
 }
 
 main {
-    margin-top: 10px; /* layout.navBarHeight */
-    margin-left: 10px; /* layout.navBarWidth */
+    margin-top: var(--layout-navBarHeight);
+    margin-left: var(--layout-navBarWidth);
     position: relative;
     padding-bottom: 30px;
     z-index: 20;
-    max-width: calc(100vw - 10); /* - layout.navBarWidth */
+    max-width: calc(100vw - var(--layout-navBarWidth));
 }
 
-@media screen and (max-width: 1023px) {
-    main {
-        margin-left: initial;
-        max-width: 100vw;
-    }
-}
-
+/* TODO: Need to handle visible var */
 .sidebar {
     width: var(--layout-navBarWidth);
     display: flex;
@@ -36,5 +30,40 @@ main {
     padding: 8px 16px;
     overflow-y: scroll;
     transition: width 0.25s, opacity 0.25s, transform 0.25s, -webkit-transform 0.25s;
-    /* TODO */
+    background: var(--menu-backgroundColor-normal);
+}
+
+    .sidebar::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .sidebar::-webkit-scrollbar-track {
+        background-color: var(--scrollbar-trackColor-normal);
+    }
+
+    .sidebar::-webkit-scrollbar-thumb {
+        width: 8px;
+        background-color: var(--scrollbar-thumbColor-normal);
+        border-radius: 4px;
+    }
+
+    .sidebar:hover::-webkit-scrollbar-thumb {
+        background: var(--scrollbar-thumbColor-active);
+    }
+
+    .sidebar:hover::-webkit-scrollbar-track {
+        background-color: var(--scrollbar-trackColor-active);
+    }
+
+@media screen and (max-width: 1023px) {
+    main {
+        margin-left: initial;
+        max-width: 100vw;
+    }
+
+    .sidebar {
+        transform: translate3d(var(--layout-navBarWidth), 0, 0);
+        left: var(--layout-navBarWidth);
+        z-index: 100;
+    }
 }
