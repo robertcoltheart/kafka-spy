@@ -150,8 +150,19 @@
     --icons-dropdownArrowIcon: var(--colors-neutral-50);
 
     /* Select */
+    --select-backgroundColor-normal: var(--colors-neutral-0);
+    --select-backgroundColor-hover: var(--colors-neutral-10);
+    --select-backgroundColor-active: var(--colors-neutral-10);
     --select-color-normal: var(--colors-neutral-90);
+    --select-color-hover: var(--colors-neutral-90);
+    --select-color-active: var(--colors-neutral-90);
     --select-color-disabled: var(--colors-neutral-30);
+    --select-borderColor-normal: var(--colors-neutral-30);
+    --select-borderColor-hover: var(--colors-neutral-50);
+    --select-borderColor-active: var(--colors-neutral-70);
+    --select-borderColor-disabled: var(--colors-neutral-10);
+    --select-optionList-scrollbar-backgroundColor: var(--colors-neutral-30);
+    --select-label: var(--colors-neutral-50);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -211,8 +222,19 @@
         --icons-dropdownArrowIcon: var(--colors-neutral-50);
 
         /* Select */
+        --select-backgroundColor-normal: var(--colors-neutral-85);
+        --select-backgroundColor-hover: var(--colors-neutral-80);
+        --select-backgroundColor-active: var(--colors-neutral-70);
         --select-color-normal: var(--colors-neutral-0);
+        --select-color-hover: var(--colors-neutral-0);
+        --select-color-active: var(--colors-neutral-0);
         --select-color-disabled: var(--colors-neutral-60);
+        --select-borderColor-normal: var(--colors-neutral-70);
+        --select-borderColor-hover: var(--colors-neutral-50);
+        --select-borderColor-active: var(--colors-neutral-70);
+        --select-borderColor-disabled: var(--colors-neutral-70);
+        --select-optionList-scrollbar-backgroundColor: var(--colors-neutral-30);
+        --select-label: var(--colors-neutral-50);
     }
 }
 

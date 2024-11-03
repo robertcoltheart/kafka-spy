@@ -17,19 +17,16 @@ public partial class Select
     [Parameter]
     public int? MinWidth { get; set; }
 
-    protected string Style =>
+    protected string ClassName => 
+        ClassBuilder.Default()
+            .With(Enabled, "enabled", "disabled")
+            .With(SelectSize == SelectSize.Medium, "medium", "large")
+            .ToString();
+
+    protected string StyleName =>
         StyleBuilder.Default()
-            .With("height", SelectSize == SelectSize.Medium
-                ? "32px"
-                : "40px")
-            .With("color", Enabled
-                ? "var(--select-color-normal)"
-                : "var(--select-color-disabled)")
             .With("min-width", MinWidth == null
                 ? "auto"
                 : MinWidth.Value.ToString())
-            .With("cursor", Enabled
-                ? "pointer"
-                : "not-allowed")
             .ToString();
 }

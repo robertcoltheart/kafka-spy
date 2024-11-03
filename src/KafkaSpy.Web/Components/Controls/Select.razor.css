@@ -11,23 +11,43 @@
     width: fit-content;
     padding-left: 16px;
     padding-right: 12px;
-    color: red; /* TODO */
-    min-width: auto; /* TODO */
-    cursor: pointer; /* TODO */
 }
-
-    ul:hover {
-        color: brown;
-        border-color: black;
-    }
 
     ul:focus {
         outline: none;
-        color: green;
-        border-color: blue;
+        color: var(--select-color-active);
+        border-color: var(--select-borderColor-active);
     }
 
     ul:disabled {
-        color: yellow;
-        border-color: aqua;
+        color: var(--select-color-disabled);
+        border-color: var(--select-borderColor-disabled);
+    }
+
+.medium {
+    height: 32px;
+}
+
+.large {
+    height: 40px;
+}
+
+.enabled {
+    color: var(--select-color-normal);
+    cursor: pointer;
+}
+
+    .enabled:hover {
+        color: var(--select-color-hover);
+        border-color: var(--select-borderColor-hover);
+    }
+
+.disabled {
+    color: var(--select-color-disabled);
+    cursor: not-allowed;
+}
+
+    .disabled:hover {
+        color: var(--select-color-disabled);
+        border-color: var(--select-borderColor-disabled);
     }
