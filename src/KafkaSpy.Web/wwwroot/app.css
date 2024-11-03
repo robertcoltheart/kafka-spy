@@ -148,6 +148,10 @@
     --icons-git-hover: var(--colors-neutral-90);
     --icons-git-active: var(--colors-neutral-70);
     --icons-dropdownArrowIcon: var(--colors-neutral-50);
+
+    /* Select */
+    --select-color-normal: var(--colors-neutral-90);
+    --select-color-disabled: var(--colors-neutral-30);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -205,6 +209,10 @@
         --icons-git-hover: var(--colors-neutral-70);
         --icons-git-active: var(--colors-neutral-90);
         --icons-dropdownArrowIcon: var(--colors-neutral-50);
+
+        /* Select */
+        --select-color-normal: var(--colors-neutral-0);
+        --select-color-disabled: var(--colors-neutral-60);
     }
 }
 
