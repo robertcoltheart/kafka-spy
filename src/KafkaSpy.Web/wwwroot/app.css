@@ -142,6 +142,7 @@
     --version-commitLink-color: var(--colors-brand-50);
 
     /* Icons */
+    --defaultIconColor: var(--colors-neutral-50);
     --icons-discord-normal: var(--colors-neutral-20);
     --icons-discord-hover: var(--colors-blue-45);
     --icons-discord-active: var(--colors-brand-15);

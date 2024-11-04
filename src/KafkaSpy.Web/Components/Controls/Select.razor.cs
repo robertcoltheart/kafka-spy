@@ -17,6 +17,9 @@ public partial class Select
     [Parameter]
     public int? MinWidth { get; set; }
 
+    [Parameter]
+    public bool ShowOptions { get; set; }
+
     protected string ClassName => 
         ClassBuilder.Default()
             .With(Enabled, "enabled", "disabled")

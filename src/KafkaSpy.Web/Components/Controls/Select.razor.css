@@ -51,3 +51,62 @@
         color: var(--select-color-disabled);
         border-color: var(--select-borderColor-disabled);
     }
+
+.selected {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.selectedOption {
+    display: flex;
+    list-style-position: inside;
+    white-space: nowrap;
+}
+
+    .selectedOption svg path {
+        fill: var(--defaultIconColor)
+    }
+
+    .selectedOption div {
+        display: none;
+    }
+
+.optionList {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    max-height: 228px;
+    margin-top: 4px;
+    background-color: var(--select-backgroundColor-normal);
+    border: 1px var(--select-borderColor-normal) solid;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--select-color-normal);
+    overflow-y: auto;
+    z-index: 10;
+    max-width: 300px;
+    min-width: 100%;
+    align-items: center;
+}
+
+    .optionList div {
+        white-space: nowrap;
+    }
+
+    .optionList::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 7px;
+    }
+
+    .optionList::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background-color: var(--select-optionList-scrollbar-backgroundColor);
+    }
+
+    .optionList::-webkit-scrollbar:horizontal {
+        height: 7px;
+    }
