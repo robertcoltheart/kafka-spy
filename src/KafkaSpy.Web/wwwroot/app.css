@@ -239,6 +239,10 @@
     }
 }
 
+*, *::before, *::after {
+  box-sizing: inherit; /* From minireset */
+}
+
 html {
     font-family: 'Inter', sans-serif;
     font-size: 14px;
@@ -250,6 +254,7 @@ html {
     text-rendering: optimizeLegibility;
     text-size-adjust: 100%;
     min-width: 300px;
+    box-sizing: border-box; /* From minireset */
 }
 
 #root, body {
