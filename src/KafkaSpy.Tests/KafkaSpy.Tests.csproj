@@ -26,4 +26,8 @@
     <ProjectReference Include="..\KafkaSpy\KafkaSpy.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
 </Project>
