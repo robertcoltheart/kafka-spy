@@ -9,7 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="AWS.MSK.Auth" Version="1.0.1" />
-    <PackageReference Include="Confluent.Kafka" Version="2.6.0" />
+    <PackageReference Include="Confluent.Kafka" Version="2.6.1" />
   </ItemGroup>
 
 </Project>
