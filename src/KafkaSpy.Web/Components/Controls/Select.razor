@@ -1,6 +1,18 @@
 ﻿<div>
     <ul class="@ClassName" style="@StyleName">
-        @ChildContent
+        <li class="selectedOption">
+            <div class="selected">
+
+            </div>
+        </li>
+        <li>
+            @if (ShowOptions)
+            {
+                <ul>
+                    @ChildContent
+                </ul>
+            }
+        </li>
     </ul>
-    <DropdownArrowIcon IsOpen="false" />
+    <DropDownArrowIcon IsOpen="false" />
 </div>

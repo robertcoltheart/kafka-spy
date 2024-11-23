@@ -1,0 +1,18 @@
+﻿.option {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 10px 12px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer; /* TODO Get from parent */
+    gap: 5px;
+    color: var(--select-color-normal) /* TODO Change if disabled */
+}
+
+    .option:hover {
+        background-color: var(--select-backgroundColor-hover); /* TODO */
+    }
+
+    .option:active {
+        background-color: var(--select-backgroundColor-active);
+    }

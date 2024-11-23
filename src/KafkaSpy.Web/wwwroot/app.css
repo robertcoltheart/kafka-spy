@@ -142,6 +142,7 @@
     --version-commitLink-color: var(--colors-brand-50);
 
     /* Icons */
+    --defaultIconColor: var(--colors-neutral-50);
     --icons-discord-normal: var(--colors-neutral-20);
     --icons-discord-hover: var(--colors-blue-45);
     --icons-discord-active: var(--colors-brand-15);
@@ -238,6 +239,10 @@
     }
 }
 
+*, *::before, *::after {
+  box-sizing: inherit; /* From minireset */
+}
+
 html {
     font-family: 'Inter', sans-serif;
     font-size: 14px;
@@ -249,6 +254,7 @@ html {
     text-rendering: optimizeLegibility;
     text-size-adjust: 100%;
     min-width: 300px;
+    box-sizing: border-box; /* From minireset */
 }
 
 #root, body {
