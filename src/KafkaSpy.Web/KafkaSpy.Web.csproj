@@ -23,4 +23,12 @@
     <None Include="../../README.md" />
   </ItemGroup>
 
+  <Target Name="LibrdkafkaTrim" AfterTargets="Publish">
+    <RemoveDir Directories="$(PublishDir)/runtimes/linux-arm64" />
+    <RemoveDir Directories="$(PublishDir)/runtimes/osx-arm64" />
+    <RemoveDir Directories="$(PublishDir)/runtimes/osx-x64" />
+    <RemoveDir Directories="$(PublishDir)/runtimes/win-x64" />
+    <RemoveDir Directories="$(PublishDir)/runtimes/win-x86" />
+  </Target>
+
 </Project>
