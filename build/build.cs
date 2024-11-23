@@ -45,9 +45,7 @@ Target("package", DependsOn("build", "test"), () =>
 
 Target("publish", DependsOn("package"), () =>
 {
-    var apiKey = Environment.GetEnvironmentVariable("NUGET_API_KEY");
-
-    Run("dotnet", $"nuget push {Path.Combine("artifacts", "*.nupkg")} --api-key {apiKey} --source https://api.nuget.org/v3/index.json");
+    Run("dotnet", $"publish --configuration Release -p ContainerImageTags='\"{version.SemVer};latest\"'");
 });
 
 Target("default", DependsOn("package"));
